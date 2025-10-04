@@ -1,0 +1,154 @@
+:root {
+  --stone: #7a7052;
+  --bronze: #b58543;
+  --medieval: #7b99b4;
+  --industrial: #6a6a6a;
+  --future: #64eafc;
+  --main-bg: #22272e;
+  --card-bg: #2c323a;
+  --accent: #ffcc29;
+  --btn: #3a4665;
+  --btn-hover: #4c5e8a;
+  --white: #fff;
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--white);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+#game-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0006;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+#era-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--accent);
+  color: var(--main-bg);
+  border-radius: 8px;
+  padding: 0.3em 0.8em;
+  font-weight: bold;
+}
+
+#era-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+#stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: space-between;
+  background: #222c36;
+  border-radius: 12px;
+  padding: 0.8em;
+}
+
+.stat {
+  flex: 1 1 40%;
+  text-align: left;
+  font-size: 1.05rem;
+  margin: 0.2rem 0;
+}
+
+.label {
+  color: var(--accent);
+  font-weight: bold;
+  margin-right: 0.3em;
+}
+
+#actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+button {
+  background: var(--btn);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.1em;
+  font-size: 1.08rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 0.2em;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: var(--btn-hover);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+.upgrades {
+  display: flex;
+  gap: 0.8em;
+}
+
+footer {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+  margin-top: 1em;
+  font-size: 0.95em;
+}
+
+#save-info {
+  margin-left: 0.5em;
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  #game-container {
+    max-width: 98vw;
+    padding: 0.6em;
+  }
+  #stats {
+    flex-direction: column;
+    gap: 0.3em;
+    padding: 0.4em;
+  }
+  .stat {
+    font-size: 0.98rem;
+  }
+}
