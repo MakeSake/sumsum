@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Chrono Empires - Idle Time Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <header>
+      <h1>Chrono Empires</h1>
+      <div id="era-banner">
+        <span id="current-era">Stone Age</span>
+        <img id="era-icon" src="assets/era_stone.png" alt="Era Icon" />
+      </div>
+    </header>
+    <main>
+      <section id="stats">
+        <div class="stat">
+          <span class="label">Time Shards:</span>
+          <span id="shard-count">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Shards/sec:</span>
+          <span id="shard-rate">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Workers:</span>
+          <span id="worker-count">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Buildings:</span>
+          <span id="building-count">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Prestige Multiplier:</span>
+          <span id="prestige-mult">1x</span>
+        </div>
+      </section>
+
+      <section id="actions">
+        <button id="click-btn">
+          <img src="assets/shard_icon.png" alt="Shard" class="icon"/>
+          Gather Time Shard
+        </button>
+        <div class="upgrades">
+          <button id="buy-worker-btn">
+            <img src="assets/worker_icon.png" alt="Worker" class="icon"/>
+            Hire Worker <span id="worker-cost">(10)</span>
+          </button>
+          <button id="buy-building-btn">
+            <img src="assets/building_icon.png" alt="Building" class="icon"/>
+            Build Workshop <span id="building-cost">(100)</span>
+          </button>
+        </div>
+        <button id="prestige-btn" disabled>
+          <img src="assets/prestige_icon.png" alt="Prestige" class="icon"/>
+          Prestige! <span id="prestige-info">Reach 1000 shards</span>
+        </button>
+      </section>
+    </main>
+    <footer>
+      <button id="save-btn">Save</button>
+      <button id="load-btn">Load</button>
+      <span id="save-info"></span>
+    </footer>
+  </div>
+  <!-- Simple placeholder sounds (optional) -->
+  <audio id="click-sound" src="assets/click.wav" preload="auto"></audio>
+  <audio id="upgrade-sound" src="assets/upgrade.wav" preload="auto"></audio>
+  <audio id="prestige-sound" src="assets/prestige.wav" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
